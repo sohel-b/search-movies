@@ -1,0 +1,176 @@
+.parent-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: auto;
+    padding: 20px; /* Optional: Add padding to avoid edges */
+    background-size: cover;
+}
+
+.show-button {
+    margin: 20px; /* Add margin to avoid overlap */
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.show-button:hover {
+    background-color: #0056b3;
+}
+
+/* Additional Styling for Flexibility */
+.button-group {
+    display: flex;
+    flex-direction: row; /* Align buttons horizontally */
+    justify-content: center; /* Center the button group horizontally */
+    align-items: center; /* Align buttons in the center vertically */
+}
+
+.movie-search {
+    text-align: center;
+}
+
+/* Container for input field with search icon */
+.input-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 0 auto;
+}
+
+/* Search icon styling */
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Position it inside the input field */
+    transform: translateY(-50%);
+    width: 20px; /* Adjust the size of the icon */
+    height: 20px;
+    pointer-events: none; /* Ensure the icon doesn't interfere with input */
+}
+
+/* Styles for the input field */
+.movie-search input[type="text"] {
+    width: calc(100% - 30px); /* Adjust width to account for the icon */
+    /* max-width: 400px; Maximum width of the input field */
+    padding: 10px 20px; /* Space inside the input field */
+    font-size: 16px; /* Font size of the text */
+    border: 2px solid #007bff; /* Border color and width */
+    border-radius: 5px; /* Rounded corners */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle shadow */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for focus effect */
+}
+
+/* Placeholder styling */
+.movie-search input[type="text"]::placeholder {
+    color: #888; /* Placeholder text color */
+    font-style: italic; /* Italicize placeholder text */
+}
+
+/* Focus effect */
+.movie-search input[type="text"]:focus {
+    border-color: #0056b3; /* Darker border color on focus */
+    box-shadow: 0 0 10px rgba(0, 86, 179, 0.5); /* Stronger shadow on focus */
+}
+
+/* Additional styles for the movie details container */
+.movie-details-container {
+    max-width: 500px;
+    margin: 20px auto; /* Center the box */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    /* text-align: left ; Align text to the left */
+}
+
+.movie-details-container h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.movie-details-container p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.movie-details-container img {
+    max-width: 100%; /* Ensure the image fits within the container */
+    border-radius: 5px;
+}
+
+/* Container for movie cards */
+.movie-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+    margin: 20px auto;
+}
+
+/* Individual movie card styling */
+.movie-card {
+    width: 220px; /* Adjust the card width */
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    overflow: hidden; /* Ensure content doesn't overflow the card */
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for movie card */
+.movie-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Movie card image styling */
+.movie-card-img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-bottom: 1px solid #ddd; /* Add a border below the image */
+    border-radius: 5px; /* Rounded corners for the image */
+}
+
+/* Movie card info styling */
+.movie-card-info {
+    padding: 10px;
+    text-align: left; /* Align text to the left for better readability */
+}
+
+
+/* Title styling */
+.movie-card-info h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Paragraph styling */
+.movie-card-info p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Style for the overview text to show only a few lines */
+.movie-card-info .overview {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5; /* Adjust line height as needed */
+    max-height: 4.5em; /* Adjust height based on line height and number of lines */
+}
+
